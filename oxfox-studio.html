@@ -299,7 +299,69 @@ body{font-family:'Inter',sans-serif;background:var(--pk);color:var(--tx);overflo
 .detail-thumbs{display:flex;gap:.6rem;padding:1rem 1.25rem;background:var(--pk);border-top:1px solid var(--brd);flex-wrap:wrap;flex-shrink:0}
 .detail-thumb{width:74px;height:74px;object-fit:cover;cursor:pointer;border-radius:6px;border:2.5px solid transparent;transition:all .25s;opacity:.55;flex-shrink:0}
 .detail-thumb:hover{opacity:.85;transform:translateY(-2px)}
-.detail-thumb.active{border-color:var(--mr);opacity:1;box-shadow:0 4px 12px rgba(107,16,32,.2)}</style>
+.detail-thumb.active{border-color:var(--mr);opacity:1;box-shadow:0 4px 12px rgba(107,16,32,.2)}
+/* ══ FLIPKART-STYLE PRODUCT PAGE ══ */
+.detail-wrap{display:grid;grid-template-columns:46% 54%;min-height:calc(100vh - 88px)}
+.detail-img-panel{position:sticky;top:88px;height:calc(100vh - 88px);display:flex;border-right:1px solid var(--brd);background:var(--wh)}
+.dthumb-strip{width:90px;display:flex;flex-direction:column;gap:10px;padding:1.25rem .75rem;border-right:1px solid var(--brd);overflow-y:auto;background:var(--offwh);flex-shrink:0}
+.dthumb-strip::-webkit-scrollbar{display:none}
+.dthumb{width:66px;height:66px;object-fit:cover;cursor:pointer;border:2.5px solid transparent;border-radius:6px;transition:all .25s;opacity:.5;flex-shrink:0;display:block}
+.dthumb:hover{opacity:.85;border-color:var(--pk4)}
+.dthumb.active{border-color:var(--mr);opacity:1;box-shadow:0 2px 12px rgba(107,16,32,.2)}
+.dthumb-strip.empty{display:none}
+.detail-main-view{flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:1.5rem;background:var(--wh);cursor:zoom-in}
+.detail-main-view img{max-width:100%;max-height:100%;object-fit:contain;transition:transform .45s var(--ease)}
+.detail-main-view:hover img{transform:scale(1.06)}
+.detail-info-panel{padding:2rem 2.5rem 5rem;overflow-y:auto}
+.dk-cat-link{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mr);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:700;display:inline-flex;align-items:center;gap:.4rem;transition:gap .3s;margin-bottom:1rem;padding:0}
+.dk-cat-link:hover{gap:.7rem}
+.dk-badges{display:flex;gap:.5rem;margin-bottom:.85rem;flex-wrap:wrap}
+.dk-badge{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:3px;font-weight:700}
+.dk-badge.best{background:var(--mr);color:var(--wh)}
+.dk-badge.newb{background:transparent;border:1.5px solid var(--mr);color:var(--mr)}
+.dk-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.6rem);font-weight:700;color:var(--tx);line-height:1.2;margin-bottom:1.1rem}
+.dk-rating-row{display:flex;align-items:center;gap:.85rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--brd)}
+.rating-pill{display:inline-flex;align-items:center;gap:.3rem;background:var(--mr);color:var(--wh);font-size:.8rem;font-weight:700;padding:5px 11px;border-radius:5px}
+.rating-count{font-size:.8rem;color:var(--mu)}
+.dk-price-section{margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--brd)}
+.dk-price-main{font-size:2.2rem;font-weight:800;color:var(--tx);font-family:'Inter',sans-serif;line-height:1;display:inline}
+.dk-price-row{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.3rem}
+.dk-mrp{font-size:1rem;color:var(--mu2);text-decoration:line-through}
+.dk-disc{font-size:1rem;color:#388e3c;font-weight:700}
+.dk-price-note{font-size:.72rem;color:var(--mu);margin-top:.3rem}
+.offers-box{background:var(--pk);border:1px solid var(--brd);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.75rem}
+.offers-title{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--tx);margin-bottom:.9rem}
+.offer-item{display:flex;align-items:flex-start;gap:.6rem;font-size:.85rem;color:var(--tx);margin-bottom:.55rem;line-height:1.5}
+.offer-item:last-child{margin-bottom:0}
+.offer-ico{color:var(--mr);font-weight:700;flex-shrink:0;margin-top:.05rem}
+.dk-qty-row{display:flex;align-items:center;gap:1.25rem;margin-bottom:1.75rem}
+.dk-qty-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mu);font-weight:700;white-space:nowrap}
+.dk-qty-ctrl{display:flex;align-items:center;border:1.5px solid var(--brd);border-radius:6px;overflow:hidden;background:var(--wh)}
+.dk-qty-btn{background:none;border:none;color:var(--tx);padding:10px 18px;cursor:pointer;font-size:1.1rem;font-weight:700;transition:background .2s;line-height:1}
+.dk-qty-btn:hover{background:var(--pk)}
+.dk-qty-num{padding:10px 16px;font-family:'Inter',sans-serif;min-width:48px;text-align:center;font-weight:700}
+.action-btns{display:flex;gap:.875rem;margin-bottom:2rem;flex-wrap:wrap}
+.btn-add-cart{flex:1;min-width:150px;padding:16px 20px;background:var(--pk);border:2px solid var(--mr);color:var(--mr);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:700;cursor:pointer;border-radius:6px;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:.6rem}
+.btn-add-cart:hover{background:var(--mr);color:var(--wh)}
+.btn-add-cart svg{stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.btn-buy-now{flex:1;min-width:150px;padding:16px 20px;background:var(--mr);border:2px solid var(--mr);color:var(--wh);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:700;cursor:pointer;border-radius:6px;transition:all .3s}
+.btn-buy-now:hover{background:var(--mr2);box-shadow:0 6px 20px rgba(107,16,32,.3);transform:translateY(-1px)}
+.highlights-box{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--brd)}
+.highlights-title{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--tx);margin-bottom:.85rem}
+.highlights-list{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.highlights-list li{font-size:.85rem;color:var(--tx);display:flex;align-items:flex-start;gap:.65rem;line-height:1.55}
+.highlights-list li::before{content:'•';color:var(--mr);font-size:1.1rem;flex-shrink:0;line-height:1.1}
+.desc-box{margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--brd)}
+.desc-box-title{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--tx);margin-bottom:.75rem}
+.desc-box-text{font-size:.88rem;color:var(--mu);line-height:1.9}
+.spec-box-title{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--tx);margin-bottom:.85rem}
+.spec-table-fk{border:1.5px solid var(--brd);border-radius:8px;overflow:hidden}
+.spec-row-fk{display:grid;grid-template-columns:140px 1fr}
+.spec-row-fk:not(:last-child){border-bottom:1px solid var(--brd)}
+.spec-row-fk:nth-child(even){background:var(--pk)}
+.spec-key{padding:12px 16px;font-size:.8rem;color:var(--mu);font-weight:600;border-right:1px solid var(--brd)}
+.spec-val{padding:12px 16px;font-size:.82rem;color:var(--tx);font-weight:500}
+@media(max-width:960px){.detail-wrap{grid-template-columns:1fr}.detail-img-panel{position:relative;top:0;height:70vw;max-height:440px}.dthumb-strip{width:76px}.action-btns{flex-direction:column}}</style>
 </head>
 <body>
 <!-- LOADER -->
@@ -801,30 +863,112 @@ function cardHTML(p,key){
     +'</div></div>';
 }
 function showProduct(key,id){
-  const cat=D[key],p=cat.products.find(x=>x.id===id);qty=1;
+  const cat=D[key],p=cat.products.find(x=>x.id===id);
+  qty=1;
+  const imgs=p.imgs&&p.imgs.length>1?p.imgs:(p.img?[p.img]:[]);
+  const disc=p.m>p.p?Math.round((p.m-p.p)/p.m*100):0;
+  const cartSvg='<svg width="18" height="18" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>';
+
+  const thumbsHTML=imgs.length>1
+    ?imgs.map((src,i)=>'<img class="dthumb'+(i===0?' active':'')+'" src="'+src+'" alt="'+p.n+'" onclick="switchImg(this)">').join('')
+    :'';
+
+  const mainHTML=imgs.length>0
+    ?'<img id="main-img" src="'+imgs[0]+'" alt="'+p.n+'">'
+    :'<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;height:100%;width:100%"><div style="font-size:6rem;opacity:.18">'+p.e+'</div><div style="font-size:.6rem;letter-spacing:.2em;color:var(--mu2);text-transform:uppercase">'+p.id+'</div></div>';
+
+  const badgeHTML=p.b?'<span class="dk-badge '+(p.b==='new'?'newb':'best')+'">'+(p.b==='new'?'New Arrival':'Bestseller')+'</span>':'';
+
+  const specExtra=p.id==='ch9'
+    ?'<div class="spec-row-fk"><div class="spec-key">Size</div><div class="spec-val">3.6cm &times; 1.6cm depth</div></div>'
+    +'<div class="spec-row-fk"><div class="spec-key">Set Contents</div><div class="spec-val">1 Mould &mdash; 6 Designs</div></div>'
+    :'';
+  const hlExtra=p.id==='ch9'
+    ?'<li>Size: 3.6cm &times; 1.6cm depth</li><li>Set Contents: 1 Mould &mdash; 6 Designs per set</li>'
+    :'';
+
   document.getElementById('detail-inner').innerHTML=
-    '<div class="breadcrumb" style="padding:1.5rem clamp(1.5rem,5vw,4rem) 0;padding-top:88px">'
+    '<div class="breadcrumb" style="padding:1rem clamp(1.5rem,5vw,4rem) 0;padding-top:98px">'
     +'<button onclick="goHome()">Home</button>'
-    +' <span style="color:var(--mu);margin:0 .5rem">/</span>'
+    +' <span style="color:var(--mu);margin:0 .4rem">/</span>'
     +'<button onclick="showCat(\''+key+'\')">'+cat.name+'</button>'
-    +' <span style="color:var(--mu);margin:0 .5rem">/</span>'
+    +' <span style="color:var(--mu);margin:0 .4rem">/</span>'
     +'<span style="color:var(--mu)">'+p.n+'</span></div>'
+
     +'<div class="detail-wrap">'
-    +(p.imgs && p.imgs.length>1
-    ? '<div class="detail-img-col has-gallery"><div class="detail-main-img"><img id="main-img" src="'+p.imgs[0]+'" alt="'+p.n+'"></div><div class="detail-thumbs">'+p.imgs.map((src,i)=>'<img class="detail-thumb'+(i===0?' active':'')+'" src="'+src+'" alt="'+p.n+'" onclick="switchImg(this)">').join('')+'</div></div>'
-    : '<div class="detail-img-col">'+(p.img?'<img src="'+p.img+'" alt="'+p.n+'">'
-      :'<div class="detail-placeholder"><div class="detail-placeholder-ico">'+p.e+'</div><div class="detail-placeholder-lbl">'+p.id+'</div></div>')+'</div>')
-    +'<div class="detail-info">'
-    +'<button class="detail-cat-link" onclick="showCat(\''+key+'\')">'+cat.name+' <span>&#8594;</span></button>'
-    +'<h1 class="detail-name">'+p.n+'</h1>'
-    +'<div class="detail-price-wrap"><span class="detail-price">&#8377;'+p.m.toLocaleString('en-IN')+'</span>'
-    +(p.mrp?'<span class="detail-mrp">&#8377;'+p.m.toLocaleString('en-IN')+'</span>':'')+'</div>'
-    +'<p class="detail-desc">'+p.desc+'</p>'
-    +'<div class="qty-wrap"><span class="qty-label">Quantity</span><div class="qty-ctrl"><button class="qty-btn" onclick="chQty(-1)">&#8722;</button><div class="qty-num" id="qd">1</div><button class="qty-btn" onclick="chQty(1)">+</button></div></div>'
-    +'<button class="btn-primary" style="width:100%;padding:15px" onclick="addCartQty(\''+key+'\',\''+p.id+'\')">Add to Cart &#8594;</button>'
-    +'<button class="btn-outline" style="width:100%;padding:15px;margin-top:.75rem" onclick="showPage(\'custom\')">Request Custom Version</button>'
-    +'<dl class="spec-table"><div class="spec-row"><dt>Material</dt><dd>'+p.mat+'</dd></div><div class="spec-row"><dt>Category</dt><dd>'+cat.name+'</dd></div></dl>'
-    +'</div></div>';
+
+    // LEFT — image panel
+    +'<div class="detail-img-panel">'
+    +'<div class="dthumb-strip'+(imgs.length>1?'':' empty')+'">'+thumbsHTML+'</div>'
+    +'<div class="detail-main-view">'+mainHTML+'</div>'
+    +'</div>'
+
+    // RIGHT — info panel
+    +'<div class="detail-info-panel">'
+    +'<button class="dk-cat-link" onclick="showCat(\''+key+'\')">'+cat.name+' <span>&#8594;</span></button>'
+    +(badgeHTML?'<div class="dk-badges">'+badgeHTML+'</div>':'')
+    +'<h1 class="dk-name">'+p.n+'</h1>'
+
+    // Rating
+    +'<div class="dk-rating-row">'
+    +'<span class="rating-pill">4.8 &#9733;</span>'
+    +'<span class="rating-count">Verified Quality &middot; Premium Grade</span>'
+    +'</div>'
+
+    // Price
+    +'<div class="dk-price-section">'
+    +'<div class="dk-price-row">'
+    +'<span class="dk-price-main">&#8377;'+p.m.toLocaleString('en-IN')+'</span>'
+    +(disc>0?'<span class="dk-mrp">&#8377;'+p.p.toLocaleString('en-IN')+'</span><span class="dk-disc">'+disc+'% off</span>':'')
+    +'</div>'
+    +'<div class="dk-price-note">inclusive of all taxes &middot; free shipping above &#8377;5,000</div>'
+    +'</div>'
+
+    // Offers
+    +'<div class="offers-box">'
+    +'<div class="offers-title">Available Offers</div>'
+    +'<div class="offer-item"><span class="offer-ico">&#10003;</span> Order <strong>5&ndash;9 Moulds</strong> &mdash; Get <strong>20% off</strong> MRP</div>'
+    +'<div class="offer-item"><span class="offer-ico">&#10003;</span> Order <strong>10+ Moulds</strong> &mdash; Get <strong>40% off</strong> MRP</div>'
+    +'<div class="offer-item"><span class="offer-ico">&#10003;</span> <strong>Free Shipping</strong> on orders above &#8377;5,000</div>'
+    +'</div>'
+
+    // Quantity
+    +'<div class="dk-qty-row">'
+    +'<span class="dk-qty-label">Quantity</span>'
+    +'<div class="dk-qty-ctrl"><button class="dk-qty-btn" onclick="chQty(-1)">&#8722;</button><div class="dk-qty-num" id="qd">1</div><button class="dk-qty-btn" onclick="chQty(1)">+</button></div>'
+    +'</div>'
+
+    // Action buttons
+    +'<div class="action-btns">'
+    +'<button class="btn-add-cart" onclick="addCartQty(\''+key+'\',\''+p.id+'\')">'+cartSvg+' ADD TO CART</button>'
+    +'<button class="btn-buy-now" onclick="window.open(\'https://wa.me/917395906336\',\'_blank\')">BUY NOW</button>'
+    +'</div>'
+
+    // Highlights
+    +'<div class="highlights-box">'
+    +'<div class="highlights-title">Highlights</div>'
+    +'<ul class="highlights-list">'
+    +'<li>Material: '+p.mat+'</li>'
+    +'<li>Category: '+cat.name+'</li>'
+    +hlExtra
+    +'</ul></div>'
+
+    // Description
+    +'<div class="desc-box">'
+    +'<div class="desc-box-title">Description</div>'
+    +'<p class="desc-box-text">'+p.desc+'</p>'
+    +'</div>'
+
+    // Specifications
+    +'<div class="spec-box-title">Specifications</div>'
+    +'<div class="spec-table-fk">'
+    +'<div class="spec-row-fk"><div class="spec-key">Material</div><div class="spec-val">'+p.mat+'</div></div>'
+    +'<div class="spec-row-fk"><div class="spec-key">Category</div><div class="spec-val">'+cat.name+'</div></div>'
+    +specExtra
+    +'</div>'
+    +'</div>' // detail-info-panel
+    +'</div>'; // detail-wrap
+
   showPage('product');
 }
 function chQty(d){qty=Math.max(1,qty+d);document.getElementById('qd').textContent=qty;}
@@ -912,7 +1056,7 @@ function submitForm(){
 
 function switchImg(thumb){
   document.getElementById('main-img').src=thumb.src;
-  document.querySelectorAll('.detail-thumb').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.dthumb').forEach(t=>t.classList.remove('active'));
   thumb.classList.add('active');
 }function toggleWA(){waOpen=!waOpen;document.getElementById('wa-popup').classList.toggle('open',waOpen);}
 function toggleIG(){igOpen=!igOpen;document.getElementById('ig-popup').classList.toggle('open',igOpen);document.getElementById('ig-btn').style.transform=igOpen?'scale(1.08)':'';}
