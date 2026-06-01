@@ -723,9 +723,13 @@ body{font-family:'Inter',sans-serif;background:var(--pk);color:var(--tx);overflo
 
 <!-- INSTAGRAM FAB -->
 <div id="ig">
-  <a href="https://www.instagram.com/oxfoxmolds/" target="_blank" rel="noopener" id="ig-btn" aria-label="Follow us on Instagram" style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(200,80,80,.35);transition:transform .3s,box-shadow .3s;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);text-decoration:none" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 8px 30px rgba(200,80,80,.5)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(200,80,80,.35)'">
+  <button id="ig-btn" aria-label="Follow us on Instagram"
+    style="width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(200,80,80,.35);transition:transform .3s,box-shadow .3s;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)"
+    onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 8px 30px rgba(200,80,80,.55)'"
+    onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(200,80,80,.35)'"
+    onclick="goInsta()">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-  </a>
+  </button>
 </div>
 
 <!-- WHATSAPP -->
@@ -1058,7 +1062,7 @@ function switchImg(thumb){
   document.querySelectorAll('.dthumb').forEach(t=>t.classList.remove('active'));
   thumb.classList.add('active');
 }function toggleWA(){waOpen=!waOpen;document.getElementById('wa-popup').classList.toggle('open',waOpen);}
-function toggleIG(){igOpen=!igOpen;document.getElementById('ig-popup').classList.toggle('open',igOpen);document.getElementById('ig-btn').style.transform=igOpen?'scale(1.08)':'';}
+function goInsta(){window.open('https://www.instagram.com/oxfoxmolds/','_blank','noopener,noreferrer')}
 function toast(msg){
   const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),2800);
